@@ -47,4 +47,8 @@ function calcular(){
     calculos=calcularInteresSimple(montoFloat,tasaFloat,plazoAniosEntero);
     interesPagar=document.getElementById("spnInteresPagar");
     interesPagar.innerText=calculos;
+    //Función 4
+    suma=calcularTotalPagar(montoFloat,calculos);
+    totalPagar=document.getElementById("spnTotalPrestamo");
+    totalPagar.innerText=suma;
 }

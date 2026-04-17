@@ -19,3 +19,9 @@ function calcularInteresSimple(monto,tasa,plazoAnios){
     interesPagar=monto*(tasa/100)*plazoAnios;
     return interesPagar;
 }
+
+function calcularTotalPagar(monto,interes){
+    let totalPagar=0;
+    totalPagar=monto+interes+100
+    return totalPagar;
+}
