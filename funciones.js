@@ -32,5 +32,12 @@ function calcularCuotaMensual(total,plazoAnios){
     meses=plazoAnios*12;
     cuotaMensual=total/meses;
     return cuotaMensual;
+}
 
+function aprobarCredito(capacidadPago,cuotaMensual){
+    if (capacidadPago>cuotaMensual){
+        return true
+    }else{;
+        return false;
+    }
 }
