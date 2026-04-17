@@ -1,0 +1,10 @@
+1. Actúa como diseñador gráfico, mejora la parte visual,
+dandole un aspecto empresarial, tambien agragele la entidad
+financiera de banco pichincha, poniendole el logo de la imagen 
+en un espacio bonito y adecuado, y la modificacion tiene que ir
+con la gama de colores de esta entidad, modifica el html y el cs,
+no cambies los ids de los componentes, manten separados los css y 
+el html. y recuerda que esto debe ser responsive
+
+2.Cambia de estilo del titulo, puede ser el tipo de letra y haciendole 
+más grande, y al logo hazle mas grande que se logre visualizar
