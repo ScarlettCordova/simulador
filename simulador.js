@@ -23,6 +23,10 @@ function calcular(){
 
     let suma;
     let totalPagar;
+
+    let cuotaMensual;
+    let lblCuotaValor;
+
     //Cajas de texto
     cmpIngresosFloat=document.getElementById("txtIngresos");
     cmpEgresosFloat=document.getElementById("txtEgresos");
@@ -51,4 +55,8 @@ function calcular(){
     suma=calcularTotalPagar(montoFloat,calculos);
     totalPagar=document.getElementById("spnTotalPrestamo");
     totalPagar.innerText=suma;
+    //Función 5
+    cuotaMensual=calcularCuotaMensual(suma,plazoAniosEntero);
+    lblCuotaValor=document.getElementById("spnCuotaMensual");
+    lblCuotaValor.innerText=cuotaMensual;
 }
