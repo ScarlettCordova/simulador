@@ -1,5 +1,9 @@
 //AQUI EL JAVASCRIPT PARA MANIPULAR EL HTML
 function calcular(){
+    if (!validarFormulario()) {
+        return; // Detiene el cálculo si hay errores
+    }
+
     let ingresosFloat=0;
     let egresosFloat=0;
     let cmpIngresosFloat;
@@ -84,5 +88,59 @@ function reiniciar(){
     document.getElementById("spnTotalPrestamo").innerText="";
     document.getElementById("spnCuotaMensual").innerText="";
     document.getElementById("spnEstadoCredito").innerText="ANALIZANDO...";
+    document.getElementById("errorIngresos").textContent = "";
+    document.getElementById("errorEgresos").textContent = "";
+    document.getElementById("errorMonto").textContent = "";
+    document.getElementById("errorPlazo").textContent = "";
+    document.getElementById("errorTasaInteres").textContent = "";
 
+}
+
+function validarFormulario() {
+    let valido = true;
+
+    valido &= validarCampo("txtIngresos", "errorIngresos", 1, 100000);
+    valido &= validarCampo("txtEgresos", "errorEgresos", 1, 100000);
+    valido &= validarCampo("txtMonto", "errorMonto", 100, 150000);
+    valido &= validarCampo("txtPlazo", "errorPlazo", 1, 20);
+    valido &= validarCampo("txtTasaInteres", "errorTasaInteres", 7, 15);
+
+    return !!valido;
+}
+
+function validarCampo(inputId, errorId, min, max) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    const valor = input.value.trim();
+
+    error.textContent = "";
+
+    // Vacío
+    if (valor === "") {
+        error.textContent = "Este campo es obligatorio";
+        return false;
+    }
+
+    // Convertir a número
+    const numero = Number(valor);
+
+    // Validar que sea número
+    if (isNaN(numero)) {
+        error.textContent = "Solo se permiten números";
+        return false;
+    }
+
+    // Validar enteros positivos
+    if (numero < 0) {
+        error.textContent = "Debe ser un número positivo";
+        return false;
+    }
+
+    // Validar rango
+    if (numero < min || numero > max) {
+        error.textContent = `Debe estar entre ${min} y ${max}`;
+        return false;
+    }
+
+    return true;
 }

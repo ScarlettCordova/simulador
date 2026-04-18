@@ -120,6 +120,13 @@ button:hover {
     background-color: #e6c800;
 }
 
+    .error {
+        color: red;
+        font-style: italic;
+        display: block;
+        margin-top: 4px;
+    }
+
 /* RESPONSIVE */
 @media (max-width: 480px) {
     .container {

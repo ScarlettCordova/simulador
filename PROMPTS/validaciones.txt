@@ -1,0 +1,13 @@
+1. Quiero validar inputs en JS. Reglas; mostrar mensaje debajo de cada input (no usar alert),
+el mensaje debe ser en color rojo y en cursiva. Validaciones: No puede estar vacío, para los ingresos debe 
+tener un min 1 y un maximo de 100000,para los egresos lo mismo que el de los ingresos,
+el monto debe tener min de 100 y max de 150000,el plazo en años debe ser min 1 max 20,
+y la tasa de interes debe tener min 7 y max 15.
+Condiciones técnicas: Usar los mismos IDs existentes: txtIngresos, txtEgresos, txtMonto, txtPlazo, txtTasaInteres.
+Usar eventos: esas validaciones se ejecutarán una vez que presione el botón
+Calcular Simulador y aparecerán los errores debajo de cada campo validado.
+No modificar IDs existentes. Mostrar errores en un elemento debajo del input.
+Devuelveme solo las partes que debo agregar o modificar (HTML, CSS Y JS), no todo el código
+
+2. Mi button esta asi: <button onclick="calcular();" id="btnCalcularCredito">Calcular Crédito</button>
+(Me había dado un botón diferente)
