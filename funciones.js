@@ -1,9 +1,15 @@
 //AQUI TODA LA LOGICA DE LAS FUNCIONES DEL NEGOCIO
+function sumarGastos(arriendo,alimentacion,varios){
+    let totalGastos=0;
+    totalGastos=arriendo+alimentacion+varios;
+    return totalGastos;
+}
+
 function calcularDisponible(ingresos,egresos){
     let valorDisponible=0;
     valorDisponible=ingresos-egresos;
     if (valorDisponible<0){
-        return"0";
+        return 0;
     }
     return valorDisponible;
 }
